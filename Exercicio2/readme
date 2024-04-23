@@ -1,0 +1,4 @@
+Cria uma Classe Pessoa, contendo os atributos encapsulados, com seus
+respectivos seletores (getters) e modificadores (setters), e ainda o construtor
+padrão e pelo menos mais uma opção de construtor conforme sua percepção.
+Atributos: String nome; String endereço; String telefone;
