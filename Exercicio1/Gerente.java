@@ -1,24 +1,29 @@
 package Exercicio1;
 
 public class Gerente extends Funcionario{
-    String senha;
-    private int numFuncGen;
+    int senha;
+    int numeroDeFuncionariosGerenciados;
 
     @Override
-    public String getInfo(){
-        super.getInfo() + "/Gerente";
+    public double getBonificacao(){
+        return this.salario * 0.15;
     }
 
-    @Override
-    public double getBonus(){
-        return super.getBonus() + this.getSalario() * 0.15;
+    public boolean autentica(int senha) {
+        if (this.senha == senha) {
+            System.out.println("Acesso permitido!");
+            return true;
+        } else {
+            System.out.println("Acesso negado!");
+            return false;
+        }
     }
 
-    public String getSenha() {
+    public int getSenha() {
         return senha;
     }
 
-    public void setSenha(String senha) {
+    public void setSenha(int senha) {
         this.senha = senha;
     }
 }

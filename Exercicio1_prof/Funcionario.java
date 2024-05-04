@@ -1,11 +1,15 @@
 package Exercicio1;
 
 public class Funcionario {
-    protected String nome;
-    protected String cpf;
-    protected double salario;
+    private String nome;
+    private String cpf;
+    private double salario;
 
-    public double getBonificacao() {
+    public String getInfo(){
+        return "/Funcionario";
+    }
+
+    public double getBonus(){
         return this.salario * 0.10;
     }
 
@@ -23,13 +27,5 @@ public class Funcionario {
 
     public void setCpf(String cpf) {
         this.cpf = cpf;
-    }
-
-    public double getSalario() {
-        return salario;
-    }
-
-    public void setSalario(double salario) {
-        this.salario = salario;
     }
 }

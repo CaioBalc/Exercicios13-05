@@ -2,22 +2,22 @@ package Exercicio1;
 
 public class Controle {
     public static void main(String[] args) {
-        Gerente gen = new Gerente();
-        gen.setNome("Gerente geral");
-        gen.setSenha("dff");
-        gen.setSalario(10000);
-        System.out.println(gen.getBonus());
-        System.out.println(gen.getNome());
+        Gerente gerente = new Gerente();
+        gerente.setNome("João da Silva");
+        gerente.setSenha(4231);
+        gerente.setSalario(5000);
+        System.out.println(gerente.getNome());
+        System.out.println(gerente.getBonificacao());
 
-        Funcionario func = new Funcionario();
-        func.setCpf("123456789-99");
-        func.setSalario(5000);
-        System.out.println(func.getBonus());
+        ControleDeBonificacoes controle = new ControleDeBonificacoes();
+        Gerente funcionario1 = new Gerente();
+        funcionario1.setSalario(5000.0);
+        controle.registra(funcionario1);
 
-        Diretor dir = new Diretor();
-        dir.setMatricula(123);
-        dir.setSalario(15000);
+        Funcionario funcionario2 = new Funcionario();
+        funcionario2.setSalario(1000.0);
+        controle.registra(funcionario2);
 
-        System.out.println(dir.getInfo());
+        System.out.println(controle.getTotalDeBeneficacoes());
     }
 }
